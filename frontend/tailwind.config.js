@@ -12,10 +12,10 @@ module.exports = {
           200: '#BFDBFE',
           300: '#93C5FD',
           400: '#60A5FA',
-          500: '#3B82F6', // Primary blue
+          500: '#7366FF', // Primary color
           600: '#2563EB',
           700: '#1D4ED8',
-          800: '#1E3A8A', // Dark blue for headers, logo
+          800: '#1E3A8A',
           900: '#1E3A8A',
         },
         secondary: {

@@ -4,8 +4,8 @@ import { useAuth } from './context/AuthContext';
 
 // Layout components
 import Header from './components/common/Header';
-import Sidebar from './components/common/Sidebar';
 import Footer from './components/common/Footer';
+import Navigation from './components/common/Navigation';
 
 // Auth pages
 import Login from './pages/auth/Login';
@@ -94,66 +94,64 @@ const App = () => {
       {currentUser ? (
         <div className="flex flex-col min-h-screen">
           <Header />
-          <div className="flex flex-1">
-            <Sidebar />
-            <main className="flex-1 p-6 bg-gray-50">
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                
-                {/* Personal profile routes */}
-                <Route path="/personal/upload" element={<PersonalUpload />} />
-                <Route path="/personal/files" element={<PersonalFiles />} />
-                <Route path="/personal/shared" element={<SharedFiles />} />
-                <Route path="/personal/borrow" element={<NotImplemented />} />
-                
-                {/* Office management routes */}
-                <Route path="/office/upload" element={<NotImplemented />} />
-                <Route path="/office/files" element={<NotImplemented />} />
-                <Route path="/office/archive" element={<NotImplemented />} />
-                
-                {/* Archive routes */}
-                <Route path="/archive/management" element={<NotImplemented />} />
-                <Route path="/archive/borrow" element={<NotImplemented />} />
-                <Route path="/archive/approve" element={<NotImplemented />} />
-                
-                {/* Record types routes */}
-                <Route path="/records/notarized" element={<NotarizedRecords />} />
-                <Route path="/records/certified" element={<NotImplemented />} />
-                <Route path="/records/authenticated" element={<NotImplemented />} />
-                <Route path="/records/translated" element={<NotImplemented />} />
-                
-                {/* Document types routes */}
-                <Route path="/documents/outgoing" element={<NotImplemented />} />
-                <Route path="/documents/incoming" element={<NotImplemented />} />
-                <Route path="/documents/blocking" element={<NotImplemented />} />
-                <Route path="/documents/internal" element={<NotImplemented />} />
-                <Route path="/documents/templates" element={<NotImplemented />} />
-                
-                {/* Statistics routes */}
-                <Route path="/statistics/records" element={<NotImplemented />} />
-                <Route path="/statistics/documents" element={<NotImplemented />} />
-                <Route path="/statistics/customers" element={<NotImplemented />} />
-                <Route path="/statistics/misa" element={<NotImplemented />} />
-                
-                {/* Reports routes */}
-                <Route path="/reports/records" element={<NotImplemented />} />
-                <Route path="/reports/documents" element={<NotImplemented />} />
-                <Route path="/reports/customers" element={<NotImplemented />} />
-                
-                {/* Settings routes */}
-                <Route path="/settings/account" element={<NotImplemented />} />
-                <Route path="/settings/employees" element={<NotImplemented />} />
-                <Route path="/settings/departments" element={<Departments />} />
-                <Route path="/settings/job-titles" element={<NotImplemented />} />
-                <Route path="/settings/record-types" element={<NotImplemented />} />
-                <Route path="/settings/document-types" element={<NotImplemented />} />
-                <Route path="/settings/archive" element={<NotImplemented />} />
-                
-                {/* Fallback route */}
-                <Route path="*" element={<Navigate to="/" />} />
-              </Routes>
-            </main>
-          </div>
+          <Navigation />
+          <main className="flex-1 p-6 bg-gray-50">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              
+              {/* Personal profile routes */}
+              <Route path="/personal/upload" element={<PersonalUpload />} />
+              <Route path="/personal/files" element={<PersonalFiles />} />
+              <Route path="/personal/shared" element={<SharedFiles />} />
+              <Route path="/personal/borrow" element={<NotImplemented />} />
+              
+              {/* Office management routes */}
+              <Route path="/office/upload" element={<NotImplemented />} />
+              <Route path="/office/files" element={<NotImplemented />} />
+              <Route path="/office/archive" element={<NotImplemented />} />
+              
+              {/* Archive routes */}
+              <Route path="/archive/management" element={<NotImplemented />} />
+              <Route path="/archive/borrow" element={<NotImplemented />} />
+              <Route path="/archive/approve" element={<NotImplemented />} />
+              
+              {/* Record types routes */}
+              <Route path="/records/notarized" element={<NotarizedRecords />} />
+              <Route path="/records/certified" element={<NotImplemented />} />
+              <Route path="/records/authenticated" element={<NotImplemented />} />
+              <Route path="/records/translated" element={<NotImplemented />} />
+              
+              {/* Document types routes */}
+              <Route path="/documents/outgoing" element={<NotImplemented />} />
+              <Route path="/documents/incoming" element={<NotImplemented />} />
+              <Route path="/documents/blocking" element={<NotImplemented />} />
+              <Route path="/documents/internal" element={<NotImplemented />} />
+              <Route path="/documents/templates" element={<NotImplemented />} />
+              
+              {/* Statistics routes */}
+              <Route path="/statistics/records" element={<NotImplemented />} />
+              <Route path="/statistics/documents" element={<NotImplemented />} />
+              <Route path="/statistics/customers" element={<NotImplemented />} />
+              <Route path="/statistics/misa" element={<NotImplemented />} />
+              
+              {/* Reports routes */}
+              <Route path="/reports/records" element={<NotImplemented />} />
+              <Route path="/reports/documents" element={<NotImplemented />} />
+              <Route path="/reports/customers" element={<NotImplemented />} />
+              
+              {/* Settings routes */}
+              <Route path="/settings/account" element={<NotImplemented />} />
+              <Route path="/settings/employees" element={<NotImplemented />} />
+              <Route path="/settings/departments" element={<Departments />} />
+              <Route path="/settings/job-titles" element={<NotImplemented />} />
+              <Route path="/settings/record-types" element={<NotImplemented />} />
+              <Route path="/settings/document-types" element={<NotImplemented />} />
+              <Route path="/settings/archive" element={<NotImplemented />} />
+              
+              {/* Fallback route */}
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </main>
           <Footer />
         </div>
       ) : (

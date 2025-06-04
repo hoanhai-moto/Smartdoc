@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
     try {
       console.log("Attempting to login with:", { username });
       
-      const response = await axios.post('/api/auth/login/', {
+      const response = await axios.post('http://demo1.phanmemluutru.com/api/auth/login/', {
         username,
         password
       });
