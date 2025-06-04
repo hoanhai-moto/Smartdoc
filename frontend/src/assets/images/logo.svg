@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SmartDoc Logo</title>
+    <g id="SmartDoc-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Background" fill="#1E3A8A" x="0" y="0" width="32" height="32" rx="6"></rect>
+        <path d="M22,7 L22,25 L10,25 L10,7 L22,7 Z M20,9 L12,9 L12,23 L20,23 L20,9 Z" id="Document" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M14,13 L18,13 L18,15 L14,15 L14,13 Z M14,17 L18,17 L18,19 L14,19 L14,17 Z" id="Lines" fill="#60A5FA" fill-rule="nonzero"></path>
+        <path d="M24,9 C25.1045695,9 26,9.8954305 26,11 C26,12.1045695 25.1045695,13 24,13 C22.8954305,13 22,12.1045695 22,11 C22,9.8954305 22.8954305,9 24,9 Z" id="Smart-Dot" fill="#60A5FA"></path>
+    </g>
+</svg> 
