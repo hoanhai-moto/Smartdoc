@@ -117,7 +117,7 @@ const Sidebar = () => {
     <aside className="w-64 bg-white shadow-sidebar h-screen overflow-y-auto">
       <div className="py-6 px-4">
         <div className="flex items-center mb-8">
-          <img 
+          {/* <img 
             src="/logo.png" 
             alt="SmartDoc Logo" 
             className="h-8 w-8 mr-2"
@@ -125,8 +125,8 @@ const Sidebar = () => {
               e.target.onerror = null;
               e.target.src = 'https://via.placeholder.com/32';
             }}
-          />
-          <span className="text-xl font-bold text-primary-800">SmartDoc</span>
+          /> */}
+          <span className="text-xl font-bold text-primary-500">SmartDoc</span>
         </div>
         
         <nav className="space-y-1">

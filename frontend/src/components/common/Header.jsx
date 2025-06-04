@@ -45,7 +45,7 @@ const Header = () => {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-primary-800">SmartDoc</h1>
+            <h1 className="text-xl font-bold text-primary-500">SmartDoc</h1>
           </div>
           
           <div className="flex items-center">
