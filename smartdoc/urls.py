@@ -19,10 +19,30 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+from rest_framework import permissions
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Smartdoc API",
+        default_version='v1',
+        description="API documentation for Smartdoc",
+    ),
+    public=True,
+    permission_classes=[permissions.AllowAny],
+)
+
+# API patterns that will be under /api/
+api_patterns = [
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('', include('documents.urls')),  # Your existing API endpoints
+]
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('documents.urls')),
+    path('api/', include(api_patterns)),  # All API routes including Swagger
 ]
 
 # Serve media files in development

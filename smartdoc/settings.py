@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h8$5$s1&jk@(^u=vb#l2n1*2b8f)0$@5#y+wm%1qx!r%79n_4b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['demo1.phanmemluutru.com', '14.225.210.30', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "documents",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
