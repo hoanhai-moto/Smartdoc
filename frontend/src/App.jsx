@@ -56,7 +56,7 @@ import NotarizedRecords from './pages/records/Notarized';
 
 // Settings pages
 import PersonalAccount from './pages/settings/PersonalAccount';
-// import Employees from './pages/settings/Employees';
+import Employees from './pages/settings/Employees';
 import Departments from './pages/settings/Departments';
 // import JobTitles from './pages/settings/JobTitles';
 // import RecordTypesSettings from './pages/settings/RecordTypes';
@@ -141,7 +141,7 @@ const App = () => {
               
               {/* Settings routes */}
               <Route path="/settings/account" element={<PersonalAccount />} />
-              <Route path="/settings/employees" element={<NotImplemented />} />
+              <Route path="/settings/employees" element={<Employees />} />
               <Route path="/settings/departments" element={<Departments />} />
               <Route path="/settings/job-titles" element={<NotImplemented />} />
               <Route path="/settings/record-types" element={<NotImplemented />} />
