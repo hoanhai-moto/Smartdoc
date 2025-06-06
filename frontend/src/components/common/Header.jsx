@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Search, Bell, Settings, ChevronDown, AlertTriangle, Globe } from 'react-feather';
 import userAvatar from '../../assets/images/avatar.png';
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
   const { currentUser, logout } = useAuth();
@@ -44,8 +45,10 @@ const Header = () => {
     <header className="bg-white shadow-md">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
+          {/* put logo next to title Smart Doc */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-primary-500">SmartDoc</h1>
+            <img src={logo} alt="logo" className="h-10 w-10 mr-2" />
+            <h1 className="text-xl font-bold text-primary-500">Smart Doc</h1>
           </div>
           
           <div className="flex items-center">
@@ -93,7 +96,7 @@ const Header = () => {
                 onClick={() => setShowDropdown(!showDropdown)}
               >
                 <span className="text-sm font-medium">
-                  {currentUser?.first_name} {currentUser?.last_name || 'Hiếu Nguyên'}
+                  {currentUser?.first_name} {currentUser?.last_name || 'Hiếu Nguyễn'}
                 </span>
                 <img
                   src={userAvatar}

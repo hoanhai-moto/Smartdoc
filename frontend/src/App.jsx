@@ -55,7 +55,7 @@ import NotarizedRecords from './pages/records/Notarized';
 // import CustomerReports from './pages/reports/Customers';
 
 // Settings pages
-// import PersonalAccount from './pages/settings/PersonalAccount';
+import PersonalAccount from './pages/settings/PersonalAccount';
 // import Employees from './pages/settings/Employees';
 import Departments from './pages/settings/Departments';
 // import JobTitles from './pages/settings/JobTitles';
@@ -95,7 +95,7 @@ const App = () => {
         <div className="flex flex-col min-h-screen">
           <Header />
           <Navigation />
-          <main className="flex-1 p-6 bg-gray-50">
+          <main className="flex-1 bg-gray-50">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               
@@ -140,7 +140,7 @@ const App = () => {
               <Route path="/reports/customers" element={<NotImplemented />} />
               
               {/* Settings routes */}
-              <Route path="/settings/account" element={<NotImplemented />} />
+              <Route path="/settings/account" element={<PersonalAccount />} />
               <Route path="/settings/employees" element={<NotImplemented />} />
               <Route path="/settings/departments" element={<Departments />} />
               <Route path="/settings/job-titles" element={<NotImplemented />} />

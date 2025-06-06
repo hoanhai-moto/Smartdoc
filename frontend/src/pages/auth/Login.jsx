@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { AlertCircle } from 'react-feather';
-import logo from '../../assets/images/logo.png';
 
 const Login = () => {
   const [username, setUsername] = useState('');
